@@ -644,6 +644,10 @@ this.VueNextSelect = (function (vue) {
         type: Boolean
       },
       // misc
+      autocomplete: {
+        "default": "off",
+        type: String
+      },
       disabled: {
         "default": false,
         type: Boolean
@@ -1333,13 +1337,14 @@ this.VueNextSelect = (function (vue) {
       "aria-disabled": _ctx.disabled
     }), [vue.createVNode("div", _hoisted_1, [_ctx.multiple && _ctx.taggable && _ctx.modelValue.length === 0 || _ctx.searchable === false && _ctx.taggable === false ? (vue.openBlock(), vue.createBlock("div", _hoisted_2, [vue.createVNode("input", {
       placeholder: _ctx.innerPlaceholder,
+      autocomplete: _ctx.autocomplete,
       readonly: "",
       onClick: _cache[1] || (_cache[1] = function () {
         return _ctx.focus && _ctx.focus.apply(_ctx, arguments);
       })
     }, null, 8
     /* PROPS */
-    , ["placeholder"])])) : vue.createCommentVNode("v-if", true), _ctx.multiple && _ctx.taggable ? (vue.openBlock(), vue.createBlock(vue.Fragment, {
+    , ["placeholder", "autocomplete"])])) : vue.createCommentVNode("v-if", true), _ctx.multiple && _ctx.taggable ? (vue.openBlock(), vue.createBlock(vue.Fragment, {
       key: 1
     }, [vue.createVNode(_component_v_tags, {
       modelValue: _ctx.optionsWithInfo,
@@ -1401,6 +1406,7 @@ this.VueNextSelect = (function (vue) {
         return _ctx.searchingInputValue = $event;
       }),
       disabled: _ctx.disabled,
+      autocomplete: _ctx.autocomplete,
       placeholder: _ctx.isFocusing ? _ctx.searchPlaceholder : _ctx.innerPlaceholder,
       onInput: _ctx.handleInputForInput,
       onChange: _ctx.handleChangeForInput,
@@ -1412,7 +1418,7 @@ this.VueNextSelect = (function (vue) {
       comboboxUid: _ctx.instance.uid
     }, null, 8
     /* PROPS */
-    , ["modelValue", "disabled", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"])) : vue.createCommentVNode("v-if", true), _ctx.loading ? vue.renderSlot(_ctx.$slots, "loading", {
+    , ["modelValue", "disabled", "autocomplete", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"])) : vue.createCommentVNode("v-if", true), _ctx.loading ? vue.renderSlot(_ctx.$slots, "loading", {
       key: 1
     }, function () {
       return [_hoisted_3];
@@ -1443,6 +1449,7 @@ this.VueNextSelect = (function (vue) {
         return _ctx.searchingInputValue = $event;
       }),
       disabled: _ctx.disabled,
+      autocomplete: _ctx.autocomplete,
       placeholder: _ctx.isFocusing ? _ctx.searchPlaceholder : _ctx.innerPlaceholder,
       onInput: _ctx.handleInputForInput,
       onChange: _ctx.handleChangeForInput,
@@ -1454,7 +1461,7 @@ this.VueNextSelect = (function (vue) {
       comboboxUid: _ctx.instance.uid
     }, null, 8
     /* PROPS */
-    , ["modelValue", "disabled", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"]), [[vue.vShow, _ctx.isFocusing]]), _ctx.loading ? vue.renderSlot(_ctx.$slots, "loading", {
+    , ["modelValue", "disabled", "autocomplete", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"]), [[vue.vShow, _ctx.isFocusing]]), _ctx.loading ? vue.renderSlot(_ctx.$slots, "loading", {
       key: 0
     }, function () {
       return [_hoisted_5];

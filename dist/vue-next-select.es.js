@@ -643,6 +643,10 @@ var VueSelect = {
       type: Boolean
     },
     // misc
+    autocomplete: {
+      "default": "off",
+      type: String
+    },
     disabled: {
       "default": false,
       type: Boolean
@@ -1332,13 +1336,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "aria-disabled": _ctx.disabled
   }), [createVNode("div", _hoisted_1, [_ctx.multiple && _ctx.taggable && _ctx.modelValue.length === 0 || _ctx.searchable === false && _ctx.taggable === false ? (openBlock(), createBlock("div", _hoisted_2, [createVNode("input", {
     placeholder: _ctx.innerPlaceholder,
+    autocomplete: _ctx.autocomplete,
     readonly: "",
     onClick: _cache[1] || (_cache[1] = function () {
       return _ctx.focus && _ctx.focus.apply(_ctx, arguments);
     })
   }, null, 8
   /* PROPS */
-  , ["placeholder"])])) : createCommentVNode("v-if", true), _ctx.multiple && _ctx.taggable ? (openBlock(), createBlock(Fragment, {
+  , ["placeholder", "autocomplete"])])) : createCommentVNode("v-if", true), _ctx.multiple && _ctx.taggable ? (openBlock(), createBlock(Fragment, {
     key: 1
   }, [createVNode(_component_v_tags, {
     modelValue: _ctx.optionsWithInfo,
@@ -1400,6 +1405,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return _ctx.searchingInputValue = $event;
     }),
     disabled: _ctx.disabled,
+    autocomplete: _ctx.autocomplete,
     placeholder: _ctx.isFocusing ? _ctx.searchPlaceholder : _ctx.innerPlaceholder,
     onInput: _ctx.handleInputForInput,
     onChange: _ctx.handleChangeForInput,
@@ -1411,7 +1417,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     comboboxUid: _ctx.instance.uid
   }, null, 8
   /* PROPS */
-  , ["modelValue", "disabled", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"])) : createCommentVNode("v-if", true), _ctx.loading ? renderSlot(_ctx.$slots, "loading", {
+  , ["modelValue", "disabled", "autocomplete", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"])) : createCommentVNode("v-if", true), _ctx.loading ? renderSlot(_ctx.$slots, "loading", {
     key: 1
   }, function () {
     return [_hoisted_3];
@@ -1442,6 +1448,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return _ctx.searchingInputValue = $event;
     }),
     disabled: _ctx.disabled,
+    autocomplete: _ctx.autocomplete,
     placeholder: _ctx.isFocusing ? _ctx.searchPlaceholder : _ctx.innerPlaceholder,
     onInput: _ctx.handleInputForInput,
     onChange: _ctx.handleChangeForInput,
@@ -1453,7 +1460,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     comboboxUid: _ctx.instance.uid
   }, null, 8
   /* PROPS */
-  , ["modelValue", "disabled", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"]), [[vShow, _ctx.isFocusing]]), _ctx.loading ? renderSlot(_ctx.$slots, "loading", {
+  , ["modelValue", "disabled", "autocomplete", "placeholder", "onInput", "onChange", "onFocus", "onBlur", "onEscape", "autofocus", "tabindex", "comboboxUid"]), [[vShow, _ctx.isFocusing]]), _ctx.loading ? renderSlot(_ctx.$slots, "loading", {
     key: 0
   }, function () {
     return [_hoisted_5];

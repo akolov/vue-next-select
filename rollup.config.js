@@ -71,23 +71,5 @@ formats.forEach(format => {
   })
 })
 
-const isWatchMode = JSON.parse(process.env.npm_config_argv).original.includes('--watch')
-configs[configs.length - 1].plugins.push(
-  copy({
-    watch: isWatchMode ? ['src/index.css'] : false,
-    copyOnce: isWatchMode === false,
-    verbose: true,
-    targets: [
-      {
-        src: 'src/index.css',
-        dest: 'dist',
-        rename: (name, extension) => `${name}.min.${extension}`,
-        transform: content => csso.minify(content).css,
-      },
-      { src: 'src/index.css', dest: 'dist' },
-    ],
-  }),
-)
-
 export default configs
 
