@@ -21,7 +21,7 @@ const formats = ['es', 'iife', 'cjs']
 
 if (process.env.DEVELOPMENT) formats.splice(2)
 
-const configs = []
+const configs = [];
 formats.forEach(format => {
   const config = {
     input,
@@ -90,3 +90,4 @@ configs[configs.length - 1].plugins.push(
 )
 
 export default configs
+
